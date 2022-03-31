@@ -103,7 +103,7 @@ def send_mail(user):
 
     Se você não pediu para sua senha ser resetada, por favor, ignore este e-mail.
 
-    Caso tente acessar o link por um aparelho celular e não consegua, tente visualizar em um computador.
+    Caso apresente erro ao acessar o link por um aparelho celular, tente visualizar em um computador.
 
     '''
     mail.send(msg)
