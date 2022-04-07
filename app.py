@@ -408,7 +408,7 @@ def get_rollups_by_coin_byid():
             symbol = name_to_symbol_map[name]
             image = name_to_image_map[name]
             bitcoin_lp = response2['bitcoin']['usd']
-            usd_cot = response3["USDBRL"]["bid"]
+            usd_cot = response3["USD"]["bid"]
             
 
             portfolio[name]['usd_cot'] = usd_cot
