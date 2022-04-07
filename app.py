@@ -237,7 +237,7 @@ def protected():
     return jsonify(logged_in_as=current_user), 200
 
 @app.route("/transactions", methods=["POST"])
-
+@jwt_required()
 @cross_origin()
 def new_transaction():
     user_id = get_jwt_identity()
@@ -313,7 +313,7 @@ def new_transaction():
 
 
 @app.route("/transactions")
-
+@jwt_required()
 @cross_origin()
 def get_transactions():
 
@@ -342,7 +342,7 @@ def get_transactions():
                 connection_object.close()
 
 @app.route("/get_rollups_by_coin")
-
+@jwt_required()
 @cross_origin()
 def get_rollups_by_coin_byid():
 
@@ -459,7 +459,7 @@ def get_rollups_by_coin_byid():
                 conn.close()
 
 @app.route("/transactions", methods=["DELETE"])
-
+@jwt_required()
 @cross_origin()
 def delete_transaction_byid():
     user_id = get_jwt_identity()
