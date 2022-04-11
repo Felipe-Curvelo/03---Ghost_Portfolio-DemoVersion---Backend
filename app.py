@@ -111,7 +111,7 @@ def send_mail(user):
 ##############POOL DE CONEXÃO COM O BANCO DE DADOS
 
 connection_pool = pooling.MySQLConnectionPool(pool_name=os.environ["POOL_NAME"],
-                                                  pool_size=8,
+                                                  pool_size=1,
                                                   pool_reset_session=False,
                                                   host=os.environ["POOL_HOST"],
                                                   database=os.environ["POOL_DATABASE"],
